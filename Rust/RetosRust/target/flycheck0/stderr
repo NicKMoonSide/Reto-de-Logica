@@ -1,0 +1,60 @@
+   0.009704525s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="3er"}: cargo::core::compiler::fingerprint: fingerprint error for RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust)/Check { test: false }/TargetInner { name: "3er", doc: true, ..: with_path("/home/nico/Reto 30Days/Rust/RetosRust/src/bin/3er.rs", Edition2024) }
+   0.009748972s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="3er"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/nico/Reto 30Days/Rust/RetosRust/target/debug/.fingerprint/RetosRust-abec2c6957636b71/bin-3er`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::compile
+   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   6: cargo::ops::cargo_compile::compile_ws
+   7: cargo::ops::cargo_compile::compile_with_exec
+   8: cargo::ops::cargo_compile::compile
+   9: cargo::commands::check::exec
+  10: <cargo::cli::Exec>::exec
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  13: std::rt::lang_start::<()>::{closure#0}
+  14: <&dyn core::ops::function::Fn<(), Output = i32> + core::marker::Sync + core::panic::unwind_safe::RefUnwindSafe as core::ops::function::FnOnce<()>>::call_once
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/ops/function.rs:287:21
+  15: std::panicking::catch_unwind::do_call::<&dyn core::ops::function::Fn<(), Output = i32> + core::marker::Sync + core::panic::unwind_safe::RefUnwindSafe, i32>
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:581:40
+  16: std::panicking::catch_unwind::<i32, &dyn core::ops::function::Fn<(), Output = i32> + core::marker::Sync + core::panic::unwind_safe::RefUnwindSafe>
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:544:19
+  17: std::panic::catch_unwind::<&dyn core::ops::function::Fn<(), Output = i32> + core::marker::Sync + core::panic::unwind_safe::RefUnwindSafe, i32>
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panic.rs:359:14
+  18: std::rt::lang_start_internal::{closure#0}
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/rt.rs:175:24
+  19: std::panicking::catch_unwind::do_call::<std::rt::lang_start_internal::{closure#0}, isize>
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:581:40
+  20: std::panicking::catch_unwind::<isize, std::rt::lang_start_internal::{closure#0}>
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:544:19
+  21: std::panic::catch_unwind::<std::rt::lang_start_internal::{closure#0}, isize>
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panic.rs:359:14
+  22: std::rt::lang_start_internal
+             at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/rt.rs:171:5
+  23: main
+  24: <unknown>
+  25: __libc_start_main
+  26: <unknown>
+   0.018968056s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="3er"}: cargo::core::compiler::fingerprint: stale: changed "/home/nico/Reto 30Days/Rust/RetosRust/src/bin/3er.rs"
+   0.019001087s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="3er"}: cargo::core::compiler::fingerprint:           (vs) "/home/nico/Reto 30Days/Rust/RetosRust/target/debug/.fingerprint/RetosRust-b8dd3e9c61ade0e6/dep-test-bin-3er"
+   0.019006438s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="3er"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1783955957, nanos: 726979040 } < FileTime { seconds: 1783956000, nanos: 239067142 }
+   0.019094967s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="3er"}: cargo::core::compiler::fingerprint: fingerprint dirty for RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust)/Check { test: true }/TargetInner { name: "3er", doc: true, ..: with_path("/home/nico/Reto 30Days/Rust/RetosRust/src/bin/3er.rs", Edition2024) }
+   0.019131928s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="3er"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/home/nico/Reto 30Days/Rust/RetosRust/target/debug/.fingerprint/RetosRust-b8dd3e9c61ade0e6/dep-test-bin-3er", reference_mtime: FileTime { seconds: 1783955957, nanos: 726979040 }, stale: "/home/nico/Reto 30Days/Rust/RetosRust/src/bin/3er.rs", stale_mtime: FileTime { seconds: 1783956000, nanos: 239067142 } }))
+   0.019398527s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint: stale: changed "/home/nico/Reto 30Days/Rust/RetosRust/src/main.rs"
+   0.019423872s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint:           (vs) "/home/nico/Reto 30Days/Rust/RetosRust/target/debug/.fingerprint/RetosRust-78970d65e86c6621/dep-bin-RetosRust"
+   0.019429030s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1783879703, nanos: 544804824 } < FileTime { seconds: 1783956000, nanos: 110938886 }
+   0.019906818s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint: fingerprint dirty for RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust)/Check { test: false }/TargetInner { name: "RetosRust", doc: true, ..: with_path("/home/nico/Reto 30Days/Rust/RetosRust/src/main.rs", Edition2024) }
+   0.019947653s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/home/nico/Reto 30Days/Rust/RetosRust/target/debug/.fingerprint/RetosRust-78970d65e86c6621/dep-bin-RetosRust", reference_mtime: FileTime { seconds: 1783879703, nanos: 544804824 }, stale: "/home/nico/Reto 30Days/Rust/RetosRust/src/main.rs", stale_mtime: FileTime { seconds: 1783956000, nanos: 110938886 } }))
+   0.020858249s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint: stale: changed "/home/nico/Reto 30Days/Rust/RetosRust/src/main.rs"
+   0.020884593s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint:           (vs) "/home/nico/Reto 30Days/Rust/RetosRust/target/debug/.fingerprint/RetosRust-c832c04c00dc97fd/dep-test-bin-RetosRust"
+   0.020888462s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1783879703, nanos: 544804824 } < FileTime { seconds: 1783956000, nanos: 110938886 }
+   0.021404732s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint: fingerprint dirty for RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust)/Check { test: true }/TargetInner { name: "RetosRust", doc: true, ..: with_path("/home/nico/Reto 30Days/Rust/RetosRust/src/main.rs", Edition2024) }
+   0.021441176s  INFO prepare_target{force=false package_id=RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust) target="RetosRust"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/home/nico/Reto 30Days/Rust/RetosRust/target/debug/.fingerprint/RetosRust-c832c04c00dc97fd/dep-test-bin-RetosRust", reference_mtime: FileTime { seconds: 1783879703, nanos: 544804824 }, stale: "/home/nico/Reto 30Days/Rust/RetosRust/src/main.rs", stale_mtime: FileTime { seconds: 1783956000, nanos: 110938886 } }))
+    Checking RetosRust v0.1.0 (/home/nico/Reto 30Days/Rust/RetosRust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
